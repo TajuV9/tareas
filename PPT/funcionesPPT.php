@@ -1,14 +1,4 @@
 <?php 
-    // Meto los movimientos en un array
-    function meterMovimientos(){
-        return [
-            PIEDRA1,
-            PIEDRA2,
-            TIJERAS,
-            PAPEL
-        ];
-    }
-
     // Elegir piedra, papel o tijera y devuelvo el movimiento elegido al azar
     function eleccionMovimiento($jugadas){
         return $jugadas[array_rand($jugadas, 1)];
