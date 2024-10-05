@@ -11,7 +11,7 @@
 
     // Elegir piedra, papel o tijera y devuelvo el movimiento elegido al azar
     function eleccionMovimiento($jugadas){
-        return $jugadas[random_int(0,3)];
+        return $jugadas[array_rand($jugadas, 1)];
     }
 
     // En función del movimiento de cada jugador se elige al ganador
