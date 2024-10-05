@@ -1,5 +1,4 @@
 <?php 
-
     // Elegir piedra, papel o tijera y devuelvo el movimiento elegido al azar
     function eleccionMovimiento(){
         switch(random_int(1,4)) {
@@ -27,8 +26,9 @@
     }
 
     // Construyo el mensaje de empate o ganador correspondiente
-    function construirMensaje($ganador){
-        return ($ganador == EMPATE) ? "¡Empate!" : "Ha ganado el jugador " . ($ganador == GANA1 ? GANA1 : GANA2);
+    function construirMensaje($vencedor){
+        return ($vencedor == EMPATE) ? 
+        "¡Empate!" : 
+        "Ha ganado el jugador " . ($vencedor == GANA1 ? GANA1 : GANA2);
     }
-
 ?>
