@@ -1,30 +1,4 @@
-<?php 
-
-    // Fichero aparte para las funciones
-    require_once("funcionesPPT.php");
-
-    // Constantes con los movimientos
-    define('PIEDRA1',  "&#x1F91C");
-    define('PIEDRA2',  "&#x1F91B");
-    define('TIJERAS',  "&#x1F596");
-    define('PAPEL',    "&#x1F91A");
-
-    // Constantes para compararlas con lo que devuelve la función elegirGanador
-    define('EMPATE', 0);
-    define('GANA1', 1);
-    define('GANA2', 2);
-
-    $jugador1 = eleccionMovimiento();
-    if($jugador1 == PIEDRA2) $jugador1 = PIEDRA1; // Si el jugador tiene la piedra contraria le pongo la que le pertenece
-    
-    $jugador2 = eleccionMovimiento();
-    if($jugador2 == PIEDRA1) $jugador2 = PIEDRA2; // Si el jugador tiene la piedra contraria le pongo la que le pertenece
-
-    $ganador = elegirGanador($jugador1, $jugador2);
-
-    $mensaje = construirMensaje($ganador);
-
-?>
+<?php require_once("main.php") // Fichero aparte para el main ?>
 
 <!DOCTYPE html>
 <html lang="es">
