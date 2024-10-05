@@ -6,7 +6,7 @@
     define('PIEDRA2',  "&#x1F91B");
     define('TIJERAS',  "&#x1F596");
     define('PAPEL',    "&#x1F91A");
-    $movimientos = meterMovimientos();
+    $movimientos = [PIEDRA1, PIEDRA2, TIJERAS, PAPEL];
     
     // Constantes para compararlas con lo que devuelve la función elegirGanador
     define('EMPATE', 0);
