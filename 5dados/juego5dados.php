@@ -1,6 +1,6 @@
 <?php
 
-    require_once(funciones5Dados.php);
+    require_once(funciones5Dados.php); // Llamo al fichero con las funciones aparte
 
     // Constantes con las caras de un dado
     define('UNO', "&#9856");
