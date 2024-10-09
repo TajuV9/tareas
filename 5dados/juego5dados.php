@@ -2,6 +2,7 @@
 
     require_once(funciones5Dados.php);
 
+    // Constantes con las caras de un dado
     define('UNO', "&#9856");
     define('DOS', "&#9857");
     define('TRES', "&#9858");
