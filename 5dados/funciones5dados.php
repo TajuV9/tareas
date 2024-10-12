@@ -16,7 +16,7 @@
     	$carasDado = count($dado);
     	static $numeroTiradas = 5;
         for($i = 1; $i <= $numeroTiradas; $i++) { 
-        	$caraAzar = rand(1, $carasDado);
+            $caraAzar = rand(1, $carasDado);
             $tiradas[$i] = $dado[$caraAzar];
         }
         return $tiradas;
@@ -43,8 +43,8 @@
     // Elegir empate o ganador según las puntuaciones de los jugadores
     function quienGana($jugador1, $jugador2){
         return ($jugador1 == $jugador2) ? "¡Empate!" : 
-        "Ha ganado el jugador " . 
-        ($jugador1 > $jugador2 ? 1 : 2);
+        	"Ha ganado el jugador " . 
+        	($jugador1 > $jugador2 ? 1 : 2);
     }
 
     // Mostrar los dados 
