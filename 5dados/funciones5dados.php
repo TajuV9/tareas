@@ -1,38 +1,51 @@
 <?php 
 
+    // Poner a cada cara del dado su valor
+	function crearDado(){
+        return [
+                  1 => "&#9856", 
+                  2 => "&#9857", 
+                  3 => "&#9858", 
+                  4 => "&#9859", 
+                  5 => "&#9860", 
+                  6 => "&#9861"
+    			];
+    }
+
     // Cada jugador tira el dado 5 veces
     function elegirTiradas($dado){
-    	$vecesTiradas = 5;
-        for($i=0; $i < $vecesTiradas; $i++) { 
-            $tiradas[] = $dado[rand(0, $vecesTiradas-1)];
+    	$carasDado = count($dado);
+    	static $numeroTiradas = 5;
+        for($i = 1; $i <= $numeroTiradas; $i++) { 
+        	$caraAzar = rand(1, $carasDado);
+            $tiradas[$i] = $dado[$caraAzar];
         }
         return $tiradas;
     }
-
+    
     // Devuelve el número correspondiente al valor que ha salido en el dado
-    function valores($valor){
-        switch ($valor) {
-          case UNO: return 1;
-          case DOS: return 2; 
-          case TRES: return 3; 
-          case CUATRO: return 4; 
-          case CINCO: return 5;
-          case SEIS: return 6;
+    function valores($valor, $dado){
+    	foreach($dado as $numeroDado => $valorDado){
+        	if($valorDado == $valor) 
+            	return $numeroDado;
         }
     }
 
     // Sumar la puntuación de los dados restando el valor del máximo y mínimo al total
-    function sumarPuntuacion($tiradas){
+    function sumarPuntuacion($tiradas, $dado){
+    	$tiradaMaxima = valores(min($tiradas), $dado);
+    	$tiradaMinima = valores(max($tiradas), $dado);
         foreach($tiradas as $tirada){
-            $sumaPuntos += valores($tirada);
+            $sumaPuntos += valores($tirada, $dado);
         }
-        return $sumaPuntos - valores(max($tiradas)) - valores(min($tiradas));
+        return $sumaPuntos - $tiradaMinima - $tiradaMaxima;
     }
 
     // Elegir empate o ganador según las puntuaciones de los jugadores
     function quienGana($jugador1, $jugador2){
         return ($jugador1 == $jugador2) ? "¡Empate!" : 
-        "Ha ganado el jugador " . ($jugador1 > $jugador2 ? 1 : 2);
+        "Ha ganado el jugador " . 
+        ($jugador1 > $jugador2 ? 1 : 2);
     }
 
     // Mostrar los dados 
@@ -41,5 +54,4 @@
         	echo $tirada;
         }
     }
-
 ?>
