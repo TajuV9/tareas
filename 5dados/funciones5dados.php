@@ -9,7 +9,7 @@
                   4 => "&#9859", 
                   5 => "&#9860", 
                   6 => "&#9861"
-    			];
+    		];
     }
 
     // Cada jugador tira el dado 5 veces
