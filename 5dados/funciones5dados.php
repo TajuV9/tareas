@@ -26,7 +26,7 @@
     function valores($valor, $dado){
     	foreach($dado as $numeroDado => $valorDado){
         	if($valorDado == $valor) 
-            	return $numeroDado;
+            	   return $numeroDado;
         }
     }
 
