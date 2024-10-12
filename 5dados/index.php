@@ -9,8 +9,8 @@
     <style>
 
         .centro{
-			font-size: 3.6rem;
-			height: 6rem;
+	    font-size: 3.6rem;
+	    height: 6rem;
         }
 
         #rojo{
