@@ -25,8 +25,7 @@
     // Devuelve el número correspondiente al valor que ha salido en el dado
     function valores($valor, $dado){
     	foreach($dado as $numeroDado => $valorDado){
-        	if($valorDado == $valor) 
-            	   return $numeroDado;
+        	if($valorDado == $valor) return $numeroDado;
         }
     }
 
