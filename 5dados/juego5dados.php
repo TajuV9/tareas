@@ -1,5 +1,4 @@
 <?php
-
     require_once(funciones5Dados.php); // Llamo al fichero con las funciones aparte
 
     $numerosDado = crearDado();
@@ -11,5 +10,4 @@
     $puntuacionJ2 = sumarPuntuacion($tiradasJ2, $numerosDado);
     
     $resultado = quienGana($puntuacionJ1, $puntuacionJ2);
-
 ?>
