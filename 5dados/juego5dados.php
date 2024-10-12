@@ -2,21 +2,14 @@
 
     require_once(funciones5Dados.php); // Llamo al fichero con las funciones aparte
 
-    // Constantes con las caras de un dado
-    define('UNO', "&#9856");
-    define('DOS', "&#9857");
-    define('TRES', "&#9858");
-    define('CUATRO', "&#9859");
-    define('CINCO', "&#9860");
-    define('SEIS', "&#9861");
-    $numerosDado = [UNO, DOS, TRES, CUATRO, CINCO, SEIS];
+    $numerosDado = crearDado();
 
-    $tiradas1 = elegirTiradas($numerosDado);
-    $puntuacion1 = sumarPuntuacion($tiradas1);
+    $tiradasJ1 = elegirTiradas($numerosDado);
+    $puntuacionJ1 = sumarPuntuacion($tiradasJ1, $numerosDado);
 
-    $tiradas2 = elegirTiradas($numerosDado);
-    $puntuacion2 = sumarPuntuacion($tiradas2);
+    $tiradasJ2 = elegirTiradas($numerosDado);
+    $puntuacionJ2 = sumarPuntuacion($tiradasJ2, $numerosDado);
     
-    $resultado = quienGana($puntuacion1, $puntuacion2);
+    $resultado = quienGana($puntuacionJ1, $puntuacionJ2);
 
 ?>
