@@ -1,4 +1,4 @@
-<?php require_once(juego5dados.php) // Llama al main ?>
+<?php require_once(juego5dados.php) // Llama al main (juego5dados.php) ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,16 +30,16 @@
         <tr>
             <th>Jugador 1</th>
             <td id="rojo" class="centro">
-                <?= mostrarTiradas($tiradas1) ?>
+                <?= mostrarTiradas($tiradasJ1) ?>
             </td>
-            <th> <?= $puntuacion1 ?> puntos </th>
+            <th> <?= $puntuacionJ1 ?> puntos </th>
         </tr>
         <tr>
             <th>Jugador 2</th>
             <td id="azul" class="centro">
-                <?= mostrarTiradas($tiradas2) ?>
+                <?= mostrarTiradas($tiradasJ2) ?>
             </td>
-            <th> <?= $puntuacion2 ?> puntos </th>
+            <th> <?= $puntuacionJ2 ?> puntos </th>
         </tr>
         <tr>
             <th>Resultado</th>
