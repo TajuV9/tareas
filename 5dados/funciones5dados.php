@@ -1,5 +1,4 @@
 <?php 
-
     // Poner a cada cara del dado su valor
 	function crearDado(){
         return [
