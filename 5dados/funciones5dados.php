@@ -14,7 +14,7 @@
     // Cada jugador tira el dado 5 veces
     function elegirTiradas($dado){
     	$carasDado = count($dado);
-    	static $numeroTiradas = 5;
+    	$numeroTiradas = 5;
         for($i = 1; $i <= $numeroTiradas; $i++) { 
             $caraAzar = rand(1, $carasDado);
             $tiradas[$i] = $dado[$caraAzar];
