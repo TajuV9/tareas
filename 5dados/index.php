@@ -1,4 +1,4 @@
-<?php require_once(juego5dados.php) // Llama al main (juego5dados.php) ?>
+<?php require_once(juego5dados.php) // Llama al main ?>
 
 <!DOCTYPE html>
 <html lang="en">
